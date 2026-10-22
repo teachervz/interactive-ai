@@ -186,65 +186,18 @@ body.idle #hint{opacity:0}
 .sim-foot .msg{flex:1}
 .empty-s{color:#9CA3AF;font-size:22px;font-weight:700;text-align:center;margin:auto 0;padding:10px}
 
-/* محاكي OneDrive */
-.cloud3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;height:100%}
-.pane{background:#fff;border-radius:20px;border:3px solid #E5E7EB;padding:12px;display:flex;flex-direction:column;gap:8px;transition:all .3s;min-height:0}
-.pane h5{margin:0;font-size:25px;text-align:center}
-.pane .pi{font-size:58px;text-align:center;line-height:1.2}
-.pane.cloud{background:linear-gradient(#E0F2FE,#fff);border-color:#BAE6FD}
-.pane.broken{filter:grayscale(1);opacity:.55}
-.flist{display:flex;flex-direction:column;gap:8px;flex:1;min-height:0;overflow:hidden}
-.file{display:flex;align-items:center;gap:6px;font-size:21px;font-weight:700;background:var(--p5);border-radius:14px;padding:8px 10px;border:2px solid transparent;animation:pop .4s both}
-.file[data-i]{cursor:pointer}
-.file[data-i]:hover{border-color:var(--p3)}
-.file .fs{margin-inline-start:auto}
-.syncing{display:inline-block;animation:pulse .5s infinite}
-
-/* محاكي المشاركة */
-.share{display:flex;flex-direction:column;gap:14px}
-.srow{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.sl{font-size:25px;font-weight:800;color:var(--muted)}
-.sfile{font-size:28px;font-weight:800;background:#fff;border-radius:18px;padding:10px 20px;border:3px solid #FDBA74;box-shadow:var(--shadow)}
-.pchip,.perm{font-size:24px;font-weight:800;border:3px solid var(--p4);background:#fff;color:var(--ink);border-radius:999px;padding:6px 20px;cursor:pointer;transition:all .2s}
-.pchip.on,.perm.on{border-color:var(--p);background:var(--p);color:#fff}
-.recv{flex:1;min-height:0;background:#fff;border-radius:20px;border:3px dashed var(--p3);padding:14px 18px;display:flex;flex-direction:column;gap:12px}
-.recv.got{border-style:solid;animation:pop .45s both}
-.rhead{font-size:25px;font-weight:700}
-.tag{font-size:21px;background:var(--p4);color:var(--p);border-radius:999px;padding:2px 14px;margin-inline-start:6px}
-.slidebox{background:linear-gradient(135deg,#FFF7ED,#FFEDD5);border-radius:16px;padding:16px 20px;position:relative}
-.sb-title{font-size:28px;font-weight:900;color:#9A3412}
-.sb-lines i{display:block;height:12px;border-radius:8px;background:#FED7AA;margin-top:10px}
-.sb-lines i:nth-child(2){width:80%}.sb-lines i:nth-child(3){width:60%}
-.cursor{position:absolute;top:-16px;left:20px;background:var(--pink);color:#fff;font-size:18px;font-weight:800;border-radius:8px;padding:2px 10px;animation:pop .4s both}
-
-/* محاكي Teams */
-.teams{display:grid;grid-template-columns:120px 1fr;flex:1;min-height:0}
-.rail{background:#EBEBF5;display:flex;flex-direction:column;gap:6px;padding:10px 8px}
-.tab{border:none;background:transparent;border-radius:16px;padding:10px 4px;font-size:38px;cursor:pointer;color:#4B53BC;display:flex;flex-direction:column;align-items:center}
-.tab span{font-size:19px;font-weight:800}
-.tab.on{background:#fff;box-shadow:0 4px 10px rgba(75,83,188,.2)}
-.tbody{position:relative;background:#F5F5FA;min-height:0}
-.tp{position:absolute;inset:0;padding:16px;display:none;flex-direction:column;gap:12px}
-.tp.on{display:flex}
-.msgs{flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:10px;justify-content:flex-end}
-.tmsg{max-width:82%;background:#fff;border-radius:18px;padding:8px 16px;font-size:23px;line-height:1.5;box-shadow:0 3px 8px rgba(0,0,0,.06);animation:rise .35s both}
-.tmsg b{display:block;font-size:19px;color:#4B53BC}
-.tmsg.me{align-self:flex-end;background:#E8EBFA}
-.send{display:flex;gap:10px}
-.send input{flex:1;font-family:inherit;font-size:24px;padding:10px 18px;border-radius:16px;border:3px solid #C5CAF0;outline:none;-webkit-user-select:text;user-select:text}
-.send .btn{background:#4B53BC;box-shadow:0 5px 0 #353B8C}
-.tiles{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:10px;min-height:0}
-.tile{background:#2D2C3E;border-radius:16px;position:relative;display:grid;place-items:center;font-size:62px;color:#fff;overflow:hidden}
-.tile.cam{background:linear-gradient(135deg,#7C3AED,#EC4899)}
-.tile .tn{position:absolute;bottom:8px;right:12px;font-size:19px;font-weight:800;background:rgba(0,0,0,.45);border-radius:8px;padding:2px 10px}
-.tile .hand{position:absolute;top:8px;left:10px;font-size:38px;animation:floaty 1.2s ease-in-out infinite}
-.tile.screen{grid-column:1 / -1;background:#0F172A;font-size:30px;font-weight:800}
-.mctl{display:flex;gap:10px;justify-content:center}
-.mbtn{border:none;font-size:30px;width:66px;height:62px;border-radius:16px;background:#fff;cursor:pointer;box-shadow:0 4px 0 #D4D4E8;transition:transform .15s}
-.mbtn:active{transform:translateY(3px)}
-.mbtn.on{background:#4B53BC;box-shadow:0 4px 0 #353B8C}
-.mbtn.leave{background:#F43F5E;box-shadow:0 4px 0 #BE123C}
-.join{margin:auto;font-size:34px!important;background:#4B53BC!important;box-shadow:0 6px 0 #353B8C!important}
+/* نشاط التصنيف: نظام تحكم مفتوح أم مغلق؟ */
+.sort{display:flex;flex-direction:column;gap:14px}
+.scard{background:#fff;border-radius:22px;box-shadow:var(--shadow);padding:14px 22px;min-height:140px;display:flex;flex-direction:column;justify-content:center;gap:4px;border-right:10px solid var(--p);animation:pop .4s both}
+.scard .scnt{font-size:20px;font-weight:800;color:var(--muted)}
+.scard .stx{font-size:30px;font-weight:800;line-height:1.5;color:var(--ink)}
+.bins{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bin{font-family:inherit;background:#fff;border:4px dashed var(--c);border-radius:22px;padding:12px;display:flex;flex-direction:column;gap:8px;min-height:0;cursor:pointer;text-align:start;transition:transform .15s,background .2s}
+.bin:hover{transform:translateY(-3px);background:color-mix(in srgb,var(--c) 8%,#fff)}
+.bin .bh{font-size:28px;font-weight:900;text-align:center;color:color-mix(in srgb,var(--c) 75%,#000)}
+.bin small{font-size:19px;font-weight:700;color:var(--muted);text-align:center}
+.bin .bl{display:flex;flex-direction:column;gap:6px;overflow:hidden}
+.bin .bl div{font-size:18px;font-weight:700;line-height:1.4;color:var(--ink);background:color-mix(in srgb,var(--c) 14%,#fff);border-radius:12px;padding:6px 10px;animation:pop .35s both}
 
 /* التمهيد: اجتماع Teams مع ترجمة فورية */
 .meet-big{background:#1B1A2E;border-radius:28px;height:100%;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 50px rgba(27,26,46,.35)}
@@ -721,6 +674,12 @@ html,body{background:#03050F}
 .motto h2{background:linear-gradient(90deg,#67E8F9,#A78BFA 50%,#F472B6);-webkit-background-clip:text;background-clip:text;color:transparent}
 .mstep.cur{background:linear-gradient(135deg,#7C5CFF,#06B6D4)}
 .blank.on{background:linear-gradient(90deg,#7C5CFF,#06B6D4)}
+/* نافذة فيديو الترحيب */
+#vidModal{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;background:rgba(20,6,50,.82);backdrop-filter:blur(8px)}
+#vidModal.show{display:flex;animation:inFade .35s ease both}
+#vidModal .vbox{position:relative;width:min(1100px,90vw);border-radius:24px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5);background:#000}
+#vidModal video{display:block;width:100%;max-height:80vh}
+#vidModal .vclose{position:absolute;top:12px;left:12px;z-index:2;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.9);font-size:22px;font-weight:800;cursor:pointer}
 </style>
 </head>
 <body>
@@ -789,51 +748,31 @@ const SLIDES = [
 
   /* 1) الشريحة الافتتاحية */
   { type:'title', anim:'zoom',
-    notes:'اضغطي زر «استمعي للحاسب» ليتكلم الحاسب بصوته (ميزة ذكاء اصطناعي: تحويل النص إلى كلام). اسألي: «من الذي تكلّم الآن؟ هل يفهم ما قاله؟»' },
+    notes:'اضغطي زر «استمعي» ليُعرض فيديو الترحيب، وعند انتهائه ينتقل العرض تلقائيًا إلى مراجعة الدرس السابق.' },
 
-  /* 2) مراجعة: OneDrive والتخزين السحابي */
-  { type:'cloud', anim:'slide', stage:'مراجعة الدرس السابق', strategy:'🔍 لاحظي واكتشفي',
-    title:'لنتذكّر: <span class="hl">OneDrive</span> والتخزين السحابي ☁️',
+  /* 2) مراجعة: المراقبة والتحكم */
+  { type:'loopSort', anim:'slide', stage:'مراجعة الدرس السابق', strategy:'🧩 صنّفي وتذكّري',
+    title:'لنتذكّر: <span class="hl">المراقبة والتحكم</span> 🎛️',
     concepts:[
-      {i:'☁️', t:'التخزين السحابي', d:'حفظ الملفات على خوادم عبر الإنترنت، لا على جهازك فقط.'},
-      {i:'🔄', t:'المزامنة', d:'أي ملف أو تعديل يظهر تلقائيًا في كل أجهزتك.'},
-      {i:'📱', t:'الوصول من أي مكان', d:'افتحي ملفاتك من الحاسب أو الجوال أو المتصفح.'},
-      {i:'🛟', t:'النسخ الاحتياطي', d:'ملفاتك بأمان حتى لو تعطّل جهازك أو ضاع.'}
+      {i:'⚖️', t:'مستشعر الضغط', d:'يحسّ بوزن السيارات المنتظرة فتطول الإشارة الخضراء.'},
+      {i:'🌡️', t:'مستشعر الحرارة', d:'في المكيّف والثلاجة والفرن والغلاية.'},
+      {i:'💧', t:'الرطوبة والماء', d:'ري الحدائق، وكشف تسرّب الماء في المنازل ومواقع العمل.'},
+      {i:'🔁', t:'التغذية الراجعة', d:'المخرجات تُراقَب وتعود لتعدّل عملية التحكم.'}
     ],
-    files:['📄 بحث التقنية.docx','🖼️ صورة الرحلة.jpg','📊 جدول الدرجات.xlsx'],
-    task:'🔮 ارفعي ملفًا أو اثنين فقط إلى السحابة.. ثم اضغطي <b>«تعطّل الجهاز!»</b> ماذا تتوقعين أن يحدث لملفاتك؟',
-    notes:'اسألي قبل كل ضغطة: «ماذا تتوقعن؟». الفكرة الأهم: الملف الذي لم يُرفع للسحابة يضيع مع الجهاز، والمرفوع يعود عند تسجيل الدخول من جهاز جديد.' },
-
-  /* 3) مراجعة: مشاركة الملفات */
-  { type:'share', anim:'slide', stage:'مراجعة الدرس السابق', strategy:'❓ استراتيجية الأسئلة',
-    title:'لنتذكّر: <span class="hl">مشاركة الملفات</span> والصلاحيات 🔗',
-    concepts:[
-      {i:'🔗', t:'رابط المشاركة', d:'رابط يوصل الملف لمن تريدين دون إرفاقه بالبريد.'},
-      {i:'👁️', t:'صلاحية العرض', d:'تقرأ الملف فقط ولا تستطيع تعديله.'},
-      {i:'✏️', t:'صلاحية التعديل', d:'تستطيع تعديل الملف مباشرة.'},
-      {i:'👭', t:'التحرير المشترك', d:'أكثر من شخص يعدّل الملف نفسه في الوقت نفسه.'}
+    bins:[
+      {i:'➡️', t:'نظام التحكم المفتوح', c:'#F59E0B', ex:'مثل: غسالة تعمل بمؤقت'},
+      {i:'🔁', t:'نظام التحكم المغلق', c:'#10B981', ex:'مثل: مكيّف بمستشعر حرارة'}
     ],
-    file:'📊 عرض مشروع المجموعة.pptx',
-    people:['نورة','سارة','ريم'],
-    task:'🤔 شاركي الملف بصلاحية <b>عرض فقط</b> ثم دعي زميلتك تحاول التعديل.. ماذا حدث؟ ومتى نختار <b>تعديل</b>؟',
-    notes:'سؤال للنقاش: «تريدين أن ترسلي شهادتك لصديقة لتراها: أي صلاحية تختارين؟ ولماذا؟» (عرض فقط حماية للملف).' },
-
-  /* 4) مراجعة: Microsoft Teams */
-  { type:'teams', anim:'slide', stage:'مراجعة الدرس السابق', strategy:'⏱️ تحدي سريع',
-    title:'لنتذكّر: <span class="hl">Microsoft Teams</span> 👥',
-    concepts:[
-      {i:'👥', t:'الفريق والقنوات', d:'مساحة عمل لمجموعة، مقسّمة إلى قنوات حسب الموضوع.'},
-      {i:'💬', t:'الدردشة', d:'رسائل فورية فردية أو جماعية.'},
-      {i:'📹', t:'الاجتماعات', d:'اجتماع بالصوت والصورة مع مشاركة الشاشة.'},
-      {i:'📁', t:'ملفات الفريق', d:'محفوظة في السحابة ويعمل عليها الجميع.'}
+    items:[
+      {b:0, t:'لا توجد مقارنة بين القيم الناتجة الفعلية والقيم المطلوبة.'},
+      {b:0, t:'لا يقدّم أية تغذية راجعة.'},
+      {b:0, t:'لا يوجد للمخرجات أي تأثير على المدخلات أو في عملية التحكم.'},
+      {b:1, t:'تتم مراقبة المخرجات ومقارنتها مع المخرجات المتوقعة من النظام.'},
+      {b:1, t:'يقدّم التغذية الراجعة.'},
+      {b:1, t:'يستخدم معلومات مراقبة المخرجات في تعديل التحكم بالنظام وضبطه.'}
     ],
-    team:'فريق أول ثانوي – التقنية الرقمية',
-    members:[ {i:'👩‍🏫', n:'المعلمة'}, {i:'👧', n:'نورة'}, {i:'👧', n:'سارة'} ],
-    messages:[ {w:'👩‍🏫 المعلمة', t:'صباح الخير يا مبدعات 🌸 ارفعن ملف المشروع في تبويب الملفات 📁'} ],
-    replies:['👍 تم','حاضر يا أستاذة 🌸','رفعتُه الآن ✅','💜💜'],
-    files:['📊 مشروع المجموعة.pptx — عدّلته نورة قبل 5 دقائق','📄 خطة البحث.docx — عدّلتها سارة أمس','🖼️ صور الرحلة — 12 صورة'],
-    task:'⏱️ تحدي الدقيقة: أرسلي رسالة في <b>الدردشة</b>، ثم انضمي إلى <b>اجتماع</b> وافتحي الكاميرا وارفعي يدك ✋',
-    notes:'اختاري طالبة تنفّذ التحدي على السبورة والبقية يوجّهنها. اسألي: ما الفرق بين الدردشة والاجتماع؟' },
+    task:'🧩 اقرئي الخاصية.. ثم اضغطي على النظام المناسب لها: <b>مفتوح</b> أم <b>مغلق</b>؟',
+    notes:'مراجعة سريعة لدرس المراقبة والتحكم (تدريب 2 من الكتاب). اسألي قبل كل إجابة: «هل يراقب النظام مخرجاته ويقارنها؟». ثم اكشفي بطاقات المستشعرات بالضغط عليها واطلبي مثالًا من البيت لكل مستشعر.' },
 
   /* 5) التمهيد: من Teams إلى الذكاء الاصطناعي */
   { type:'bridge', anim:'zoom', stage:'التمهيد', strategy:'🔮 ماذا تتوقعين؟',
@@ -851,7 +790,7 @@ const SLIDES = [
       '4️⃣ وحين تبحثين في صور جوالك عن <b>«بحر»</b> تظهر صور البحر.. مع أنكِ لم تكتبي ذلك على أي صورة! 🌊',
       { key:true, t:'💡 السر: الذكاء الاصطناعي — وهو درس اليوم!' }
     ],
-    notes:'زر «استمعي» ينطق الجملة بالإنجليزية بصوت الحاسب. الكتاب يذكر الترجمة الفورية للمحادثات في Microsoft Teams كمثال على تعلّم الآلة، فهي ربط مباشر بين الدرسين.' },
+    notes:'زر «استمعي» ينطق الجملة بالإنجليزية بصوت الحاسب. الكتاب يذكر الترجمة الفورية للمحادثات في Microsoft Teams كمثال على تعلّم الآلة.' },
 
   /* 6) نواتج التعلم */
   { type:'goals', anim:'fade', stage:'نواتج التعلم', strategy:'🎯 أهداف واضحة',
@@ -1397,130 +1336,45 @@ const T = {
         <div class="orbit-ring">${['💬','👁️','🚗','🎮','🩺','🌐','🦾','🎙️'].map((e,i)=>{const a=i/8*2*Math.PI;return `<span style="left:${50+50*Math.cos(a)}%;top:${50+50*Math.sin(a)}%">${e}</span>`}).join('')}</div>
         <div class="orbit-core"><span class="float">🤖</span></div>
       </div></div>`,
-    init:(el)=>{ $('.say',el).onclick=()=>say(LESSON.welcomeVoice); }
+    init:(el)=>{ $('.say',el).onclick=()=>playWelcomeVideo(); }
   },
 
-  /* ---------- محاكي OneDrive ---------- */
-  cloud:{
+  /* ---------- مراجعة المراقبة والتحكم: تصنيف مفتوح / مغلق ---------- */
+  loopSort:{
     html:s=>`${head(s)}<div class="s-body"><div class="review-grid">
       <div class="col">${conceptsHTML(s)}<div class="task st">${s.task}</div></div>
-      <div class="st"><div class="sim" style="--c:#0078D4">${simHead('☁️ OneDrive — محاكاة')}
-        <div class="sim-body"><div class="cloud3">
-          <div class="pane pc"><div class="pi">💻</div><h5>جهازي</h5><div class="flist pcl"></div></div>
-          <div class="pane cloud"><div class="pi"><span class="cl">☁️</span></div><h5>OneDrive</h5><div class="flist cll"></div></div>
-          <div class="pane"><div class="pi">📱</div><h5>جوالي</h5><div class="flist phl"></div></div>
-        </div></div>
-        <div class="sim-foot"><span class="msg"></span></div>
-        <div class="sim-foot" style="justify-content:center"><button class="btn sm rose crash">💥 تعطّل الجهاز!</button><button class="btn sm soft fix">🔧 جهاز جديد</button><button class="btn sm soft rst">🔄 من جديد</button></div>
+      <div class="st"><div class="sim" style="--c:#0E7490">${simHead('🧩 صِلي كل خاصية بنوع نظام التحكم')}
+        <div class="sim-body sort">
+          <div class="scard"><span class="scnt"></span><div class="stx"></div></div>
+          <div class="bins">${s.bins.map((b,i)=>`<button class="bin" data-b="${i}" style="--c:${b.c}"><div class="bh">${b.i} ${b.t}</div><small>${b.ex}</small><div class="bl"></div></button>`).join('')}</div>
+        </div>
+        <div class="sim-foot"><span class="msg"></span><button class="btn sm soft rst">🔄</button></div>
       </div></div></div></div>`,
     init:(el,s)=>{
-      const pcl=$('.pcl',el), cll=$('.cll',el), phl=$('.phl',el), msg=$('.msg',el), pc=$('.pc',el), cl=$('.cl',el);
-      const up=new Set(), lost=new Set(); let broken=false, busy=false;
-      const hello='👆 اضغطي على ملف في «جهازي» لرفعه إلى السحابة';
-      const render=()=>{
-        const mine=s.files.map((f,i)=>lost.has(i)?'':`<div class="file" data-i="${i}">${f}<span class="fs">${up.has(i)?'✅':'⬆️'}</span></div>`).join('');
-        pcl.innerHTML = broken ? '<div class="empty-s">💻❌<br>الجهاز معطّل</div>' : (mine || '<div class="empty-s">لا توجد ملفات</div>');
-        const cloud=[...up].map(i=>`<div class="file">${s.files[i]}</div>`).join('') || '<div class="empty-s">فارغ</div>';
-        cll.innerHTML=cloud; phl.innerHTML=cloud; pc.classList.toggle('broken',broken);
-        $$('.file[data-i]',pcl).forEach(f=>f.onclick=()=>upload(+f.dataset.i));
+      const card=$('.scard',el), msg=$('.msg',el), bins=$$('.bin',el);
+      let order, i, first, score;
+      const show=()=>{
+        card.style.animation='none'; card.offsetWidth; card.style.animation='';
+        if(i>=order.length){
+          card.innerHTML=`<div class="stx">🎉 أحسنتِ! صنّفتِ كل الخصائص<br>${score} / ${order.length} من المحاولة الأولى</div>`;
+          msg.innerHTML='💡 المغلق <b>يراقب ويقارن ويصحّح</b> (تغذية راجعة).. والمفتوح لا.'; celebrate(); return; }
+        card.innerHTML=`<span class="scnt">${i+1} / ${order.length}</span><div class="stx">${order[i].t}</div>`;
       };
-      const upload=i=>{ if(busy||broken||up.has(i)) return; busy=true; cl.classList.add('syncing'); msg.textContent='🔄 جاري الرفع والمزامنة...'; Sound.tick();
-        setTimeout(()=>{ up.add(i); busy=false; cl.classList.remove('syncing'); render(); Sound.success();
-          msg.innerHTML='✅ تمت المزامنة! الملف الآن في السحابة <b>وعلى جوالك</b> تلقائيًا'; },1100); };
-      $('.crash',el).onclick=()=>{ if(broken) return; broken=true; Sound.wrong();
-        s.files.forEach((_,i)=>{ if(!up.has(i)) lost.add(i); }); render();
-        msg.innerHTML = !up.size ? '😱 ضاعت كل الملفات! لأنها لم تُرفع إلى السحابة'
-          : lost.size ? `😌 ${up.size} ملف بأمان في السحابة.. و😱 ${lost.size} ضاع لأنه لم يُرفع!` : '😌 لا تقلقي! كل ملفاتك محفوظة في السحابة'; };
-      $('.fix',el).onclick=()=>{ if(!broken) return; broken=false; render(); Sound.pop();
-        msg.innerHTML='🔧 جهاز جديد + تسجيل الدخول إلى OneDrive = عادت ملفاتك المرفوعة ✨'; };
-      $('.rst',el).onclick=()=>{ up.clear(); lost.clear(); broken=false; render(); msg.textContent=hello; };
-      msg.textContent=hello; render();
-    }
-  },
-
-  /* ---------- محاكي مشاركة الملفات ---------- */
-  share:{
-    html:s=>`${head(s)}<div class="s-body"><div class="review-grid">
-      <div class="col">${conceptsHTML(s)}<div class="task st">${s.task}</div></div>
-      <div class="st"><div class="sim" style="--c:#0078D4">${simHead('🔗 مشاركة ملف — محاكاة')}
-        <div class="sim-body share">
-          <div class="srow"><div class="sfile">${s.file}</div></div>
-          <div class="srow"><span class="sl">مع من؟</span>${s.people.map((n,i)=>`<button class="pchip${i?'':' on'}" data-n="${esc(n)}">👧 ${n}</button>`).join('')}</div>
-          <div class="srow"><span class="sl">الصلاحية:</span><button class="perm on" data-p="view">👁️ عرض فقط</button><button class="perm" data-p="edit">✏️ تعديل</button>
-            <button class="btn sm doShare">🔗 مشاركة</button></div>
-          <div class="recv"><div class="empty-s">📭 لم تتم المشاركة بعد</div></div>
-        </div>
-        <div class="sim-foot"><span class="msg">👆 اختاري زميلة والصلاحية ثم اضغطي «مشاركة»</span></div>
-      </div></div></div></div>`,
-    init:(el,s)=>{
-      let who=s.people[0], perm='view'; const recv=$('.recv',el), msg=$('.msg',el);
-      const pick=(sel,attr,set)=>$$(sel,el).forEach(b=>b.onclick=()=>{ $$(sel,el).forEach(x=>x.classList.remove('on')); b.classList.add('on'); set(b.dataset[attr]); Sound.tick(); });
-      pick('.pchip','n',v=>who=v); pick('.perm','p',v=>perm=v);
-      const reset=()=>{ recv.className='recv'; recv.innerHTML='<div class="empty-s">📭 لم تتم المشاركة بعد</div>'; };
-      $('.doShare',el).onclick=()=>{
-        const p=perm, n=who;
-        recv.className='recv'; recv.offsetWidth; recv.className='recv got';
-        recv.innerHTML=`<div class="rhead">📩 وصل الرابط إلى <b>${n}</b> وفتحت الملف <span class="tag">${p==='edit'?'✏️ يمكنها التعديل':'👁️ عرض فقط'}</span></div>
-          <div class="slidebox"><div class="sb-title">مشروع المجموعة: الأمن الرقمي</div><div class="sb-lines"><i></i><i></i><i></i></div></div>
-          <div class="srow"><button class="btn sm amber tryEdit">✏️ ${n} تحاول التعديل</button><button class="btn sm soft stop">⛔ إيقاف المشاركة</button></div>`;
-        msg.innerHTML=`🔗 شاركتِ الملف مع ${n} بصلاحية <b>${p==='edit'?'تعديل':'عرض فقط'}</b>`; Sound.pop();
-        $('.tryEdit',recv).onclick=()=>{
-          if(p==='view'){ recv.classList.add('shake'); setTimeout(()=>recv.classList.remove('shake'),500); Sound.wrong();
-            msg.innerHTML=`🚫 لا تملك ${n} صلاحية التعديل.. يمكنها القراءة فقط`; }
-          else { $('.sb-title',recv).textContent='مشروع المجموعة: الذكاء الاصطناعي ✨';
-            if(!$('.cursor',recv)) $('.slidebox',recv).insertAdjacentHTML('beforeend',`<span class="cursor">✍️ ${n}</span>`);
-            Sound.success(); msg.innerHTML=`✍️ ${n} عدّلت العنوان وأنتِ ترين التعديل فورًا! <b>(التحرير المشترك)</b>`; } };
-        $('.stop',recv).onclick=()=>{ reset(); Sound.pop(); msg.innerHTML=`⛔ أوقفتِ المشاركة.. لم يعد بإمكان ${n} فتح الملف`; };
-      };
-    }
-  },
-
-  /* ---------- محاكي Teams ---------- */
-  teams:{
-    html:s=>`${head(s)}<div class="s-body"><div class="review-grid">
-      <div class="col">${conceptsHTML(s)}<div class="task st">${s.task}</div></div>
-      <div class="st"><div class="sim" style="--c:#4B53BC">${simHead('👥 Teams — '+s.team)}
-        <div class="teams">
-          <div class="rail"><button class="tab on" data-t="chat">💬<span>الدردشة</span></button><button class="tab" data-t="meet">📹<span>اجتماع</span></button><button class="tab" data-t="files">📁<span>الملفات</span></button></div>
-          <div class="tbody">
-            <div class="tp on" data-t="chat"><div class="msgs"></div><div class="send"><input type="text" placeholder="اكتبي رسالة للفريق..."><button class="btn sm">➤</button></div></div>
-            <div class="tp" data-t="meet"></div>
-            <div class="tp" data-t="files"><div class="flist">${s.files.map(f=>`<div class="file" style="font-size:23px;padding:12px 16px">${f}</div>`).join('')}</div></div>
-          </div>
-        </div>
-      </div></div></div></div>`,
-    init:(el,s,ctx)=>{
-      /* التبويبات */
-      $$('.tab',el).forEach(b=>b.onclick=()=>{ $$('.tab',el).forEach(x=>x.classList.toggle('on',x===b)); $$('.tp',el).forEach(x=>x.classList.toggle('on',x.dataset.t===b.dataset.t)); Sound.tick(); });
-      /* الدردشة */
-      const box=$('.msgs',el), inp=$('.send input',el);
-      const add=(w,t,me)=>{ const d=document.createElement('div'); d.className='tmsg'+(me?' me':''); d.innerHTML=`<b>${w}</b>${esc(t)}`; box.appendChild(d); while(box.children.length>5) box.firstChild.remove(); };
-      const others=s.members.filter(m=>m.n!=='المعلمة');
-      const send=()=>{ const t=inp.value.trim(); if(!t) return; inp.value=''; add('أنا',t,true); Sound.pop();
-        setTimeout(()=>{ const m=others[Math.random()*others.length|0]; add(m.i+' '+m.n, s.replies[Math.random()*s.replies.length|0]); Sound.tick(); },1200); };
-      $('.send .btn',el).onclick=send; inp.onkeydown=e=>{ if(e.key==='Enter') send(); };
-      s.messages.forEach(m=>add(m.w,m.t));
-      /* الاجتماع */
-      const meet=$('.tp[data-t="meet"]',el); const st={joined:false,mic:true,cam:false,hand:false,screen:false}; let done=false;
-      const render=()=>{
-        if(!st.joined){ meet.innerHTML='<div class="empty-s" style="font-size:28px">📹 اجتماع الفريق بدأ الآن</div><button class="btn join">📞 انضمي للاجتماع</button>';
-          $('.join',meet).onclick=()=>{ st.joined=true; render(); Sound.success(); }; return; }
-        const tiles=s.members.map(m=>`<div class="tile"><span>${m.i}</span><span class="tn">${m.n}</span></div>`).join('');
-        const me=`<div class="tile${st.cam?' cam':''}"><span>${st.cam?'🙂':'👧'}</span><span class="tn">أنا ${st.mic?'🎤':'🔇'}</span>${st.hand?'<span class="hand">✋</span>':''}</div>`;
-        meet.innerHTML=`<div class="tiles">${st.screen?'<div class="tile screen">🖥️ أنتِ تشاركين الشاشة الآن</div>':''}${me}${tiles}</div>
-          <div class="mctl">
-            <button class="mbtn${st.mic?' on':''}" data-k="mic" title="الميكروفون">${st.mic?'🎤':'🔇'}</button>
-            <button class="mbtn${st.cam?' on':''}" data-k="cam" title="الكاميرا">📷</button>
-            <button class="mbtn${st.hand?' on':''}" data-k="hand" title="رفع اليد">✋</button>
-            <button class="mbtn${st.screen?' on':''}" data-k="screen" title="مشاركة الشاشة">🖥️</button>
-            <button class="mbtn leave" data-k="leave" title="مغادرة">📞</button></div>`;
-        $$('.mbtn',meet).forEach(b=>b.onclick=()=>{ const k=b.dataset.k;
-          if(k==='leave'){ Object.assign(st,{joined:false,hand:false,screen:false,cam:false}); toast('👋 غادرتِ الاجتماع'); }
-          else { st[k]=!st[k]; if(k==='hand'&&st.hand){ toast('✋ رفعتِ يدك.. المعلمة ستراكِ'); } }
-          Sound.pop(); render(); });
-        if(st.hand && st.cam && !done){ done=true; celebrate(); }   // أنجزت التحدي
-      };
-      render();
+      const start=()=>{ order=shuffle(s.items); i=0; first=true; score=0; $$('.bl',el).forEach(b=>b.innerHTML='');
+        msg.textContent='👆 اضغطي على النظام الذي تنطبق عليه الخاصية'; show(); };
+      bins.forEach(b=>b.onclick=()=>{
+        if(i>=order.length) return;
+        const it=order[i];
+        if(+b.dataset.b===it.b){
+          $('.bl',b).insertAdjacentHTML('beforeend',`<div>${it.t}</div>`);
+          if(first) score++; Sound.pop(); msg.innerHTML='✅ صحيح!'; i++; first=true; show();
+        } else {
+          first=false; card.classList.add('shake'); setTimeout(()=>card.classList.remove('shake'),500); Sound.wrong();
+          msg.innerHTML='🤔 فكّري: هل توجد <b>مراقبة ومقارنة وتغذية راجعة</b>؟ إن وُجدت فهو مغلق';
+        }
+      });
+      $('.rst',el).onclick=start;
+      start();
     }
   },
 
@@ -2108,11 +1962,34 @@ const Deck = {
 function fit(){ const s=Math.min(innerWidth/1920, innerHeight/1080); $('#stage').style.transform=`translate(-50%,-50%) scale(${s})`; }
 addEventListener('resize', fit); fit();
 
+/* ---------- فيديو الترحيب: يُفتح في نافذة وعند انتهائه ننتقل للشريحة التالية ---------- */
+function playWelcomeVideo(){
+  let m=$('#vidModal');
+  if(!m){
+    m=document.createElement('div'); m.id='vidModal';
+    m.innerHTML='<div class="vbox"><button class="vclose" title="إغلاق (Esc)">✕</button><video src="welcome.MP4" playsinline controls></video></div>';
+    document.body.appendChild(m);
+    const v=$('video',m);
+    $('.vclose',m).onclick=()=>closeWelcomeVideo();
+    m.onclick=e=>{ if(e.target===m) closeWelcomeVideo(); };
+    v.onended=()=>{ closeWelcomeVideo(); Deck.next(); };
+  }
+  const v=$('video',m); v.currentTime=0; m.classList.add('show');
+  v.play().catch(()=>{});
+}
+function closeWelcomeVideo(){ const m=$('#vidModal'); if(!m) return; $('video',m).pause(); m.classList.remove('show'); }
+
 /* ---------- لوحة المفاتيح ---------- */
 document.addEventListener('keydown', e=>{
   const typing = /^(INPUT|TEXTAREA)$/.test(e.target.tagName);
   if(typing){ if(e.key==='Escape') e.target.blur(); return; }   // لا نتدخل أثناء الكتابة
   if(e.ctrlKey||e.metaKey||e.altKey) return;
+  const vm=$('#vidModal');
+  if(vm && vm.classList.contains('show')){   // أثناء عرض الفيديو: لا تنقّل بين الشرائح
+    if(e.key==='Escape') closeWelcomeVideo();
+    else if(e.key===' '){ e.preventDefault(); const v=$('video',vm); v.paused?v.play():v.pause(); }
+    return;
+  }
   const k=e.key;
   if(k==='ArrowRight'||k===' '||k==='PageDown'){ e.preventDefault(); Deck.next(); }
   else if(k==='ArrowLeft'||k==='PageUp'){ e.preventDefault(); Deck.prev(); }
