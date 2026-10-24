@@ -674,6 +674,14 @@ html,body{background:#03050F}
 .motto h2{background:linear-gradient(90deg,#67E8F9,#A78BFA 50%,#F472B6);-webkit-background-clip:text;background-clip:text;color:transparent}
 .mstep.cur{background:linear-gradient(135deg,#7C5CFF,#06B6D4)}
 .blank.on{background:linear-gradient(90deg,#7C5CFF,#06B6D4)}
+/* شريحة فيديو داخل العرض */
+.vid-wrap{display:grid;grid-template-columns:1.75fr 1fr;gap:30px;height:100%;align-items:center}
+.vframe{border-radius:26px;overflow:hidden;background:#000;aspect-ratio:16/9;box-shadow:0 0 0 3px rgba(103,232,249,.45),0 20px 60px rgba(2,6,23,.6)}
+.vframe video{display:block;width:100%;height:100%}
+.vwatch{background:#fff;border-radius:26px;padding:22px 26px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:16px}
+.vwatch h3{margin:0;font-size:32px;color:var(--p)}
+.vwatch ol{margin:0;padding-inline-start:30px;display:flex;flex-direction:column;gap:10px}
+.vwatch li{font-size:27px;font-weight:700;line-height:1.5;color:var(--ink)}
 /* نافذة فيديو الترحيب */
 #vidModal{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;background:rgba(20,6,50,.82);backdrop-filter:blur(8px)}
 #vidModal.show{display:flex;animation:inFade .35s ease both}
@@ -841,6 +849,13 @@ const SLIDES = [
     options:[ {i:'⚡',t:'أسرع في الحساب فقط'}, {i:'🧠',t:'تتعلّم من البيانات وتتحسّن بالخبرة'}, {i:'📝',t:'يكتب المبرمج لها كل القواعد'}, {i:'🔌',t:'لا تحتاج إلى أي بيانات'} ],
     answer:1,
     explain:'الآلة تستنتج القاعدة من الأمثلة، وتتحسّن كلما زادت خبرتها.' },
+
+  /* 11.5) فيديو: كيف يتعلّم الذكاء الاصطناعي؟ */
+  { type:'video', anim:'zoom', stage:'الشرح (أنا أفعل)', strategy:'🎬 شاهدي وراقبي',
+    title:'كيف <span class="hl">يتعلّم</span> الذكاء الاصطناعي؟ 🎬',
+    src:'how-ai-learns-voice.mp4',
+    watch:[ 'من أين تتعلّم الآلة؟', 'ماذا يحدث عندما تخطئ؟', 'ما الخطوات التي مرّت بها حتى تعلّمت؟' ],
+    notes:'اقرئي أسئلة «راقبي» قبل التشغيل. مدة الفيديو 3 دقائق تقريبًا، وعند انتهائه ينتقل العرض تلقائيًا إلى شرح خطوات تعلّم الآلة لتجيب الطالبات عن الأسئلة أثناء الشرح.' },
 
   /* 12) شرح خطوات تعلّم الآلة (قبل لعبة الترتيب) */
   { type:'steps', anim:'slide', stage:'الشرح (أنا أفعل)', strategy:'🪜 خطوة بخطوة',
@@ -1372,6 +1387,21 @@ const T = {
       });
       $('.rst',el).onclick=start;
       start();
+    }
+  },
+
+  /* ---------- فيديو: يعمل بالزر وعند انتهائه ننتقل للشريحة التالية ---------- */
+  video:{
+    html:s=>`${head(s)}<div class="s-body"><div class="vid-wrap">
+      <div class="vframe st"><video src="${s.src}" preload="metadata" playsinline controls></video></div>
+      <div class="vwatch st"><h3>👀 راقبي أثناء المشاهدة:</h3><ol>${s.watch.map(q=>`<li>${q}</li>`).join('')}</ol>
+        <button class="btn play">▶ شاهدي الفيديو</button></div>
+    </div></div>`,
+    init:(el,s,ctx)=>{
+      const v=$('video',el);
+      $('.play',el).onclick=()=>{ v.play().catch(()=>{}); };
+      v.onended=()=>{ if(Deck.els[Deck.cur]===el) Deck.next(); };
+      ctx.onLeave.push(()=>v.pause());
     }
   },
 
